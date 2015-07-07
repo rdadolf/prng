@@ -10,11 +10,9 @@
 #include "prng.h"
 
 #ifdef USE_RAND
-  #warning "Using system rand()"
   #define SRAND(seed) srand(seed)
   #define RAND() rand()
 #else
-  #warning "Using prng rand()"
   struct prng_rand_t state;
   #define SRAND(seed) prng_srand(seed,&state)
   #define RAND() prng_rand(&state)
