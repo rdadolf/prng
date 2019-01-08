@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
   #ifdef USE_RAND
   for( i=0; i<N; i++ ) {
     diehard[i] = RAND();
-    printf("%ld ", diehard[i]);
+    //printf("%ld ", diehard[i]);
   }
   #else
   for( i=0; i<N/2; i++ ) {
